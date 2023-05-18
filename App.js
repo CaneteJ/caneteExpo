@@ -1,20 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import { Button } from "@react-native-material/core";
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Button
+        title="Register"
+        onPress={() => alert("Register button clicked!")}
+        style={styles.button}
+      />
+      <Button
+        title="Login"
+        onPress={() => alert("Login button clicked!")}
+        style={styles.button}
+      />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#808080",
+  },
+  button: {
+    marginTop: 20,
+    width: "80%",
+    backgroundColor: "#000000",
   },
 });
+
+export default App;
